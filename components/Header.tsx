@@ -28,7 +28,7 @@ const Head2 = (props: props) => <Head>
 
 const Header = () => <Head2>
     <div>
-        <img src="/images/Business-Growth-illustration-1.png"/>
+        <img src="Business-Growth-illustration-1.png"/>
     </div>
 </Head2>
 

@@ -8,8 +8,6 @@ import Header from "@components/Header"
 
 const app = new Hono()
 
-app.use('/static/*', serveStatic({ root: '../public/images' }))
-
 const Content = (props: { siteData: SiteData; name: string }) => (
   <Layout {...props.siteData}>
     <Header></Header>
@@ -29,12 +27,7 @@ app.get('/', (c) => {
   return c.html(<Content {...props} />)
 })
 
-app.get(
-  '/static/*',
-  serveStatic({
-    root: '../public/images',
-    rewriteRequestPath: (path) => path.replace(/^\/static/, '../public/images'),
-  })
-)
+app.use('*', serveStatic({ root: './public/images/' }))
+app.get('*', serveStatic({ path: './public/images/*' }))
 
 export default app
