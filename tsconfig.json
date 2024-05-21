@@ -5,7 +5,8 @@
     "jsxImportSource": "hono/jsx",
     "paths": {
       "@components/*": ["./components/*"],
-      "@pages/*": ["./src/pages/*"]
+      "@pages/*": ["./src/pages/*"],
+      "@images/*": ["./public/images/*"],
     }
   }
 }
